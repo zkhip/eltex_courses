@@ -7,7 +7,7 @@ int main() {
     unsigned int x = 0xA1B2C3D4;
     printf("Original number: %X\n\n", x);
 
-    unsigned char* ptr = &x;
+    unsigned char* ptr = (unsigned char*)&x;
     for (int i = 0; i < 4; i++) {
         printf("%d byte: %X\n", i + 1, *(ptr + i));
     } 
